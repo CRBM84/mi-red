@@ -1,0 +1,3 @@
+# Git Language Attributes
+*.jsx linguist-language=JavaScript
+*.tsx linguist-language=TypeScript
