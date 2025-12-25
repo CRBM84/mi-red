@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+@source "./view/library/**/*.css";
+@source "./**/*.jsx";
+
+@theme {
+    --color-primary: #2a6592;
+
+}
