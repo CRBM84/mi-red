@@ -96,4 +96,4 @@ export default function Register(props) {
     </main>
 }
 
-// dark light mode "flex justify-center items-center flex-col h-full box-border bg-[var(--back-color)]"
+// dark light mode "flex justify-center items-center flex-col h-full box-border bg-(--back-color)"
