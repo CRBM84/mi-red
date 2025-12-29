@@ -25,7 +25,7 @@ const user1 = {
 debugger
 
 describe('downvote', () => {
-    before(() => db.connect(process.env.MONGO_URL_TEST))
+    before(() => db.connect(process.env.MONGO_URL_TEST, {}))
 
     beforeEach(() => Promise.all([User.deleteMany(), Recommend.deleteMany()]))
 

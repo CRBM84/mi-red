@@ -29,7 +29,7 @@ const recommend1 = { //don't include user.id not
 debugger
 
 describe('getRecommendById', () => {
-    before(() => db.connect(process.env.MONGO_URL_TEST))
+    before(() => db.connect(process.env.MONGO_URL_TEST, {}))
 
     beforeEach(() => Promise.all([User.deleteMany(), Recommend.deleteMany()]))
 

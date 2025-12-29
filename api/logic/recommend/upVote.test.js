@@ -2,7 +2,7 @@ import 'dotenv/config'
 import db from 'dat'
 import upVote from './upVote.js'
 
-db.connect(process.env.MONGO_URL_TEST)
+db.connect(process.env.MONGO_URL_TEST, {})
     .then(() => {
         try {
             return upVote(userId, recommendId)

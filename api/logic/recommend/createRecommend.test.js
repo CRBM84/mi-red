@@ -2,7 +2,7 @@ import 'dotenv/config'
 import db from 'dat'
 import createRecommend from './createRecommend.js'
 
-db.connect(process.env.MONGO_URL_TEST)
+db.connect(process.env.MONGO_URL_TEST, {})
   .then(() => {
     try {
       return createRecommend(userId, city, country, category, price, link, imageUrl, recommendation, subject)

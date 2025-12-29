@@ -23,7 +23,7 @@ const user1 = {
 }
 
 describe('registerUser', () => {
-    before(() => db.connect('mongodb://127.0.0.1:27017/mired-test')) //process.env.MONGO_ULR_TEST
+    before(() => db.connect('mongodb://127.0.0.1:27017/mired-test', {})) //process.env.MONGO_ULR_TEST
 
     beforeEach(() => User.deleteMany())
 

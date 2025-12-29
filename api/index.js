@@ -6,7 +6,7 @@ import cors from 'cors'
 import errorHandler from './routes/helpers/errorHandler.js'//index.js
 import { usersRouter, recommendRouter } from './routes/index.js' // add {recommendRouter} latter //process.env.MONGO_URL_TEST
 
-db.connect(process.env.MONGO_URL).then(() => { // switch to main db latter
+db.connect(process.env.MONGO_URL, {}).then(() => { // switch to main db latter
     console.log('db connected')
 
     const server = express()

@@ -1,10 +1,13 @@
-import { connect, disconnect } from 'mongoose'
+import mongoose from 'mongoose'
 import { User, Recommend, Comment, Country, City, Destination } from './models.js'
 import './mongoose-plus.js'
 
+// Configure Mongoose global settings for v9 compatibility
+mongoose.set('strictQuery', false);
+
 const db = {
-    connect,
-    disconnect
+    connect: (uri, options) => mongoose.connect(uri, options),
+    disconnect: () => mongoose.disconnect()
 }
 
 export default db
